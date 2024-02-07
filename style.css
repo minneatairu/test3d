@@ -1,1 +1,30 @@
-.container {height:100%}
+/* Reset any default margins and padding */
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Prevent scrollbars from appearing */
+}
+
+/* Ensure the container and model-viewer take up the full screen */
+.container, model-viewer {
+    width: 100vw; /* 100% of the viewport width */
+    height: 100vh; /* 100% of the viewport height */
+    display: block; /* Ensure it is a block-level element to fill the width */
+}
+
+/* Optional: Adjust the AR button and progress bar for better visibility */
+#ar-button {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%); /* Center the button horizontally */
+    z-index: 10; /* Ensure it's above the model-viewer */
+}
+
+.progress-bar {
+    position: absolute;
+    bottom: 60px; /* Adjust based on your layout */
+    left: 0;
+    width: 100%;
+    z-index: 10;
+}
